@@ -28,9 +28,8 @@
                     <div class="col p-10 br-4">
                         <div class="input">
                             <h1 style="color: white"><i>MINA SIDOR</i></h1>
-                            <a href="./../"><button style="color: white" class="button is-outline"><i>SUBMIT</i></button></a>
                             <p style="color: rgba(0, 0, 0, 0.0);">_</p>
-                            
+                            <a href="./../"><button style="color: white" class="button is-outline"><i>SUBMIT</i></button></a>
                         </div>
                     </div>
                 </div>
