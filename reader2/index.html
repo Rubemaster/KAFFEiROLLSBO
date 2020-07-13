@@ -47,6 +47,7 @@
                         <div class="input">
                             <h1 style="color: white"><i>SCANNER</i></h1>
                             <p style="color: rgba(0, 0, 0, 0.0);">_</p>
+                            <h3><i>STATE: </i><i id="setState"></i></h3>
                             <pre><code id="result"></code></pre>
                             <button id="startButton" style="color: white" class="button is-outline"><i>PÅ</i></button>
                             <button id="resetButton" style="color: white" class="button is-outline"><i>AV</i></button>
@@ -108,9 +109,12 @@
                         codeReader.decodeOnceFromVideoDevice(selectedDeviceId, 'video').then((result) => {
                             console.log(result)
                             document.getElementById('result').textContent = result.text
+                            document.getElementById('setState').textContent = 'SUCCESS';
                         }).catch((err) => {
                             console.error(err)
                             document.getElementById('result').textContent = err
+                            
+                            document.getElementById('setState').textContent = 'FAILED';
                         })
                         console.log(`Started continous decode from camera with id ${selectedDeviceId}`)
                     }
