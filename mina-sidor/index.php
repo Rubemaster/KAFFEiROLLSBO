@@ -29,7 +29,7 @@
                         <div class="input">
                             <h1 style="color: white"><i>MINA SIDOR</i></h1>
                             <p style="color: rgba(0, 0, 0, 0.0);">_</p>
-                            <a href="./../"><button style="color: white" class="button is-outline"><i>SUBMIT</i></button></a>
+                            <a href="./../"><button style="color: white" class="button is-outline"><i>LOGGA UT</i></button></a>
                         </div>
                     </div>
                 </div>
