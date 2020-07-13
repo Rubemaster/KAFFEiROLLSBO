@@ -43,7 +43,7 @@
             <div class="col p-10 br-4" style="background-color: #002B66">
                 <div class="row p-10">
                     <div class="col p-10">
-                        <h1 style="color: white"><i>BETALMETOD</i></h1>
+                        <h1 style="color: white"><i>KUPONG:</i></h1>
                         <h3 style="color: white"><i>NAMN: JEPPE GUSTAFSSON</i></h3>
                         <h3 style="color: white"><i>OMRÅDE: ROLLSBO</i></h3>
                         <div style="height: 20px;"><svg id="barcode1"></svg></div>
