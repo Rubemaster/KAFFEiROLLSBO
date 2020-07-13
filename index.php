@@ -48,7 +48,7 @@
                             <p style="color: rgba(0, 0, 0, 0.0);">_</p>
                             <input style="color: #002B66; background-color: white" class="" type="PASSWORD" placeholder="REPEAT" />
                             <p style="color: rgba(0, 0, 0, 0.0);">_</p>
-                            <a href=""><button style="color: white" class="button is-outline"><i>SUBMIT</i></button></a>
+                            <a href="/mina-sidor"><button style="color: white" class="button is-outline"><i>SUBMIT</i></button></a>
                         </div>
                     </div>
                 </div>
