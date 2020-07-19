@@ -46,28 +46,14 @@ if($tablename=="INVOICES"){
   echo $invoice_items_from;
   echo " to ";
   echo $invoice_items_to;
-  $sql = "INSERT INTO MyGuests (REFERENCE, PROJECT_ID, PAYEE_ID, COMPANY_ID, ITEMS_FROM, ITEMS_TO, PDF_BINARY) 
+  $sql = "INSERT INTO INVOICES (REFERENCE, PROJECT_ID, PAYEE_ID, COMPANY_ID, ITEMS_FROM, ITEMS_TO, PDF_BINARY) 
           VALUES ('$invoice_reference', '$invoice_payee_id', '$invoice_project_id','$invoice_payee_id','$invoice_company_id','$invoice_items_from','$invoice_items_to','$invoice_binary')";
   if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
   } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
   }
-}
-
-// Create connection
-// Check connection
-
-//$sql = "INSERT INTO MyGuests (firstname, lastname, email)
-//VALUES ('John', 'Doe', 'john@example.com')";
-
-//if ($conn->query($sql) === TRUE) {
-//  echo "New record created successfully";
-//} else {
-//  echo "Error: " . $sql . "<br>" . $conn->error;
-//}
-
-//$conn->close();
-//?>
+  $conn->close();
+}?>
 <html>
 </html>
