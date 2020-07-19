@@ -72,19 +72,19 @@
       let inputs=[];
       let labels=[];
       for(let i=0;i<formInputs.length;i++){
-        tds.push(document.createElement("td"));
         inputs.push(document.createElement("input"));
+        inputs[i].type="text";
+        inputs[i].name=formInputs[i];
+        inputs[i].id=formInputs[i];
+        inputs[i].style="color: white";
         labels.push(document.createElement("label"));
-        inputs[inputs.length-1].type="text";
-        inputs[inputs.length-1].name=formInputs[i];
-        inputs[inputs.length-1].id=formInputs[i];
-        inputs[inputs.length-1].style="color: white";
-        labels[labels.length-1].for=formInputs[i];
-        labels[labels.length-1].style="color: white";
-        labels[labels.length-1].innerHTML=formInputs[i];
-        tds[tds.legnth-1].appendChild(label);
-        tds[tds.legnth-1].appendChild(input);
-        table.appendChild(tds[tds.length-1]);
+        labels[i].for=formInputs[i];
+        labels[i].style="color: white";
+        labels[i].innerHTML=formInputs[i];
+        tds.push(document.createElement("td"));
+        tds[i].appendChild(label);
+        tds[i].appendChild(input);
+        table.appendChild(tds[i]);
       }
     </script>
   </body>
