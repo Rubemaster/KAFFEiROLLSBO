@@ -4,6 +4,16 @@ $username = $_POST["USERNAME"];
 $password = $_POST["PASSWORD"];
 $dbname = $_POST["DBNAME"];
 $tablename = $_POST["TABLENAME"];
+echo $servername;
+echo '<br>';
+echo $username;
+echo '<br>';
+echo $password;
+echo '<br>';
+echo $dbname;
+echo '<br>';
+echo $tablename;
+echo '<br>';
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
