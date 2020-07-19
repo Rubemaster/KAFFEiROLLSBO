@@ -29,7 +29,7 @@
                         <div class="input">
                             <h1 style="color: white; white-space: nowrap;"><i>RECORD COMMAND</i></h1>
                             <p style="color: rgba(0, 0, 0, 0.0);">_</p>
-                            <form action="./../DB_ACCESS/push-record.php" method="POST">
+                            <form action="./../../DB_ACCESS/search.php" method="POST">
                               <table id="TABLE_INPUT">
                                 <tr>
                                   <td>
