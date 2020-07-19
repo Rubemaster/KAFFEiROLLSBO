@@ -66,23 +66,26 @@
         </div>
     </div>
     <script>
+      let formInputs=["what","what","in"];
       let table = document.getElementById("TABLE_INPUT");
-      let input = document.createElement("input");
-      let label = document.createElement("label");
-      let td = document.createElement("td");
-      input.type = "text";
-      input.name = "input1";
-      input.id = "input1";
-      input.style="color: white";
-      label.for = "input1";
-      label.style="color: white";
-      label.innerHTML="infromation";
-      td.appendChild(label);
-      td.appendChild(input);
-      table.appendChild(td);
-      table.appendChild(td);
-      table.appendChild(td);
-      table.appendChild(td);
+      let tds=[];
+      let inputs=[];
+      let labels=[];
+      for(let i=0;i<formInputs.length;i++){
+        tds.push(document.createElement("td"));
+        inputs.push(document.createElement("td"));
+        labels.push(document.createElement("td"));
+        inputs[inputs.length-1].type="text";
+        inputs[inputs.length-1].name=formInputs[i];
+        inputs[inputs.length-1].id=formInputs[i];
+        inputs[inputs.length-1].style="color: white";
+        labels[labels.length-1].for=formInputs[i];
+        labels[labels.length-1].style="color: white";
+        labels[labels.length-1].innerHTML=formInputs[i];
+        tds[tds.legnth-1].appendChild(label);
+        tds[tds.legnth-1].appendChild(input);
+        table.appendChild(tds[tds.length-1]);
+      }
     </script>
   </body>
 </html>
