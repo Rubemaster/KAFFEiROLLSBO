@@ -73,8 +73,8 @@
       let labels=[];
       for(let i=0;i<formInputs.length;i++){
         tds.push(document.createElement("td"));
-        inputs.push(document.createElement("td"));
-        labels.push(document.createElement("td"));
+        inputs.push(document.createElement("input"));
+        labels.push(document.createElement("label"));
         inputs[inputs.length-1].type="text";
         inputs[inputs.length-1].name=formInputs[i];
         inputs[inputs.length-1].id=formInputs[i];
