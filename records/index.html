@@ -50,7 +50,7 @@
                                   </td>
                                   <td>
                                     <label for="TABLE_NAME" style="color: white">TABLE NAME:</label><br>
-                                    <input onchange="checkForMatch();" type="text" id="TABLE_NAME" name="fname" style="color: white">
+                                    <input type="text" id="TABLE_NAME" name="fname" style="color: white">
                                   </td>
                                 </tr>
                                 <tr id="TABLE_INPUT">
@@ -98,6 +98,7 @@
           reload();
         }
       }
+      document.getElementById("TABLE_NAME").addEventListener("change", checkForMatch());
     </script>
   </body>
 </html>
