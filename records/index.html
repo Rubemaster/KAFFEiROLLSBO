@@ -73,6 +73,7 @@
       let tableName="";
       let formInputs=[];
       let reload=function(){
+        table.innerHTML="";
         let tds=[];
         let inputs=[];
         let labels=[];
@@ -100,7 +101,6 @@
           reload();
         }
       }
-      document.getElementById("TABLE_NAME").addEventListener("change", (event) => {checkForMatch();});
       
     </script>
   </body>
