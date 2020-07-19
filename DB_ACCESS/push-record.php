@@ -47,7 +47,7 @@ if($tablename=="INVOICES"){
   echo " to ";
   echo $invoice_items_to;
   $sql = "INSERT INTO MyGuests (REFERENCE, PROJECT_ID, PAYEE_ID, COMPANY_ID, ITEMS_FROM, ITEMS_TO, PDF_BINARY) 
-          VALUES ('$invoice_reference', '$invoice_payee_id', '$invoice_project_id','$invoice_payee_id','$invoice_company_id','$invoice_items_from','$invoice_items_to')";
+          VALUES ('$invoice_reference', '$invoice_payee_id', '$invoice_project_id','$invoice_payee_id','$invoice_company_id','$invoice_items_from','$invoice_items_to','$invoice_binary')";
 }
 
 // Create connection
