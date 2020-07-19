@@ -25,6 +25,6 @@ if ($conn->connect_error) {
   session_register('RESULTS');
   $_SESSION['RESULTS']=$results;
   $conn->close();
-  header('Location: ./../records/search');
+  header("Location: https://rubenrick.online/records/search/");
 }
 ?>
