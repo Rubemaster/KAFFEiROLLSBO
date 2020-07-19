@@ -77,7 +77,7 @@
       let formInputs=[];
       let reload=function(){
         table.innerHTML="";
-        let trs=[];
+        let tr=document.createElement("tr");
         let tds=[];
         let inputs=[];
         let labels=[];
@@ -85,7 +85,6 @@
         let trAt=0;
         for(let i=0;i<formInputs.length;i++){
           if(yCount==4){
-            trs.push(document.createElement("tr"));
             yCount=0;}
           yCount++;
           
@@ -101,9 +100,9 @@
           tds.push(document.createElement("td"));
           tds[i].appendChild(labels[i]);
           tds[i].appendChild(inputs[i]);
-          trs[trAt].appendChild(tds[i]);
+          tr.appendChild(tds[i]);
         }
-        table.appendChild(trs[trAt]);
+        table.appendChild(tr);
       }
       
       let checkForMatch=function(){
