@@ -49,8 +49,8 @@
                                     <input type="text" id="fname" name="fname" style="color: white">
                                   </td>
                                   <td>
-                                    <label for="fname" style="color: white">TABLE NAME:</label><br>
-                                    <input type="text" id="fname" name="fname" style="color: white">
+                                    <label for="TABLE_NAME" style="color: white">TABLE NAME:</label><br>
+                                    <input onchange="checkForMatch();" type="text" id="TABLE_NAME" name="fname" style="color: white">
                                   </td>
                                 </tr>
                                 <tr id="TABLE_INPUT">
@@ -66,26 +66,37 @@
         </div>
     </div>
     <script>
-      let formInputs=["what","what","in"];
-      
       let table = document.getElementById("TABLE_INPUT");
-      let tds=[];
-      let inputs=[];
-      let labels=[];
-      for(let i=0;i<formInputs.length;i++){
-        inputs.push(document.createElement("input"));
-        inputs[i].type="text";
-        inputs[i].name=formInputs[i];
-        inputs[i].id=formInputs[i];
-        inputs[i].style="color: white";
-        labels.push(document.createElement("label"));
-        labels[i].for="nothing";
-        labels[i].style="color: white";
-        labels[i].innerHTML=formInputs[i];
-        tds.push(document.createElement("td"));
-        tds[i].appendChild(labels[i]);
-        tds[i].appendChild(inputs[i]);
-        table.appendChild(tds[i]);
+      let tableName="";
+      let formInputs=[];
+      let reload=function(){
+        table.innerHTML="";
+        let tds=[];
+        let inputs=[];
+        let labels=[];
+        for(let i=0;i<formInputs.length;i++){
+          inputs.push(document.createElement("input"));
+          inputs[i].type="text";
+          inputs[i].name=formInputs[i];
+          inputs[i].id=formInputs[i];
+          inputs[i].style="color: white";
+          labels.push(document.createElement("label"));
+          labels[i].for="nothing";
+          labels[i].style="color: white";
+          labels[i].innerHTML=formInputs[i];
+          tds.push(document.createElement("td"));
+          tds[i].appendChild(labels[i]);
+          tds[i].appendChild(inputs[i]);
+          table.appendChild(tds[i]);
+        }
+      }
+      
+      let checkForMatch=function(){
+        tableName=document.getElementById("TABLE_NAME").value;
+        if(tableName=="PROJECTS"){
+          let formInputs=["PROJECT_NAME","COMPANY_ID","ACCOUNT_NUMBER","DISCLAIMER"];
+          reload();
+        }
       }
     </script>
   </body>
