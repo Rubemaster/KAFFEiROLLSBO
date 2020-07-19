@@ -1,9 +1,16 @@
 <?php
-$servername = $_POST["SERVERNAME"];
-$username = $_POST["USERNAME"];
-$password = $_POST["PASSWORD"];
-$dbname = $_POST["DBNAME"];
-$search_term=$_POST["SEARCH_TERM"];
+session_start();
+if(!isset($_SESSION["SERVERNAME"])){$_SESSION["SERVERNAME"] = $_POST["SERVERNAME"];}
+if(!isset($_SESSION["USERNAME"])){$_SESSION["USERNAME"] = $_POST["USERNAME"];}
+if(!isset($_SESSION["PASSWORD"])){$_SESSION["PASSWORD"] = $_POST["PASSWORD"];}
+if(!isset($_SESSION["DBNAME"])){$_SESSION["DBNAME"] = $_POST["DBNAME"];}
+if(!isset($_SESSION["SEARCH_TERM"])){$_SESSION["SEARCH_TERM"]=$_POST["SEARCH_TERM"];}
+
+$servername = $_SESSION["SERVERNAME"];
+$username = $_SESSION["USERNAME"];
+$password = $_SESSION["PASSWORD"];
+$dbname = $_SESSION["DBNAME"];
+$search_term=$_SESSION["SEARCH_TERM"];
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -21,9 +28,8 @@ if ($conn->connect_error) {
     }
   }
   
-  session_start();
-  header("Location: ./../records/search/");
   $_SESSION['RESULTS']=$results;
+  header("Location: ./../records/search/");
   $conn->close();
   
 }
