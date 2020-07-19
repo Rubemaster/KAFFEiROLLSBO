@@ -22,9 +22,8 @@ if ($conn->connect_error) {
   }
   
   session_start();
-  session_register('RESULTS');
-  $_SESSION['RESULTS']=$results;
   header("Location: ./../records/search/");
+  $_SESSION['RESULTS']=$results;
   $conn->close();
   
 }
