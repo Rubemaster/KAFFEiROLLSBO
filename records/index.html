@@ -53,9 +53,7 @@
                                     <input type="text" id="fname" name="fname" style="color: white">
                                   </td>
                                 </tr>
-                                <tr>
-                                  <td id="TABLE_INPUT">
-                                  </td>
+                                <tr id="TABLE_INPUT">
                                 </tr>
                               </table>
                             </form>
@@ -71,6 +69,7 @@
       let table = document.getElementById("TABLE_INPUT");
       let input = document.createElement("input");
       let label = document.createElement("label");
+      let td = document.createElement("td");
       input.type = "text";
       input.name = "input1";
       input.id = "input1";
@@ -78,8 +77,9 @@
       label.for = "input1";
       label.style="color: white";
       label.innerHTML="infromation";
-      table.appendChild(label);
-      table.appendChild(input);
+      td.appendChild(label);
+      td.appendChild(input);
+      table.appendChild(td);
     </script>
   </body>
 </html>
