@@ -67,7 +67,6 @@
     </div>
     <script>
       let formInputs=["what","what","in"];
-      let table = document.getElementById("TABLE_INPUT");
       let tds=[];
       let inputs=[];
       let labels=[];
@@ -82,8 +81,8 @@
         labels[i].style="color: white";
         labels[i].innerHTML="nothing";
         tds.push(document.createElement("td"));
-        tds[i].appendChild(label);
-        tds[i].appendChild(input);
+        tds[i].appendChild(labels[i]);
+        tds[i].appendChild(inputs[i]);
         table.appendChild(tds[i]);
       }
     </script>
