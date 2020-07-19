@@ -15,6 +15,7 @@ echo $dbname;
 echo '<br>Tabel Name: ';
 echo $tablename;
 echo '<br>';
+echo '<br>';
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -23,6 +24,7 @@ if ($conn->connect_error) {
 }else{
   echo "Connection Seuccessful";
 }
+echo '<br>';
 if($tablename=="INVOICES"){
 
   $invoice_reference  = $_POST["REFERENCE"];
@@ -32,7 +34,6 @@ if($tablename=="INVOICES"){
   $invoice_items_from = $_POST["ITEMS_FROM"];
   $invoice_items_to   = $_POST["ITEMS_TO"];
   $invoice_binary     = $_POST["BINARY"];
-  echo '<br>Target Table: INVOICES';
   echo '<br>Reference number: ';
   echo $invoice_reference;
   echo '<br>Project ID: ';
