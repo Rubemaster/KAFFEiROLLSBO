@@ -76,7 +76,7 @@
       let reload=function(){
         let matches = document.getElementsByClassName('dynamic');
         while(matches[0]) {
-          matches[0].parentNode.removeChild(paras[0]);
+          matches[0].parentNode.removeChild(matches[0]);
         }
         let tr=document.createElement("TR");
         tr.className="dynamic";
