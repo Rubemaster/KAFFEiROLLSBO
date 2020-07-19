@@ -51,6 +51,9 @@
                                   <td>
                                     <label for="TABLE_NAME" style="color: white">TABLE NAME:</label><br>
                                     <select id="TABLE_NAME" name="TABLE_NAME" style="color: white" onchange="checkForMatch()">
+                                      <option value="ADDRESS">ADDRESS</option>
+                                      <option value="COMPANIES">COMPANIES</option>
+                                      <option value="INVOICES">INVOICES</option>
                                       <option value="PROJECTS">PROJECTS</option>
                                       <option value="USERS">USERS</option>
                                     </select>
@@ -96,8 +99,24 @@
       
       let checkForMatch=function(){
         tableName=document.getElementById("TABLE_NAME").value;
+        if(tableName=="ADDRESS"){
+          formInputs=["NAME","ADDRESS_NAME","CONTACT_1","CONTACT_2"];
+          reload();
+        }
+        if(tableName=="COMPANIES"){
+          formInputs=["NAME","ADDRESS_ID","PROJECTS"];
+          reload();
+        }
+        if(tableName=="INVOICES"){
+          formInputs=["REFERENCE","PROJECT-ID","PAYEE-ID","ITEMS-FROM","ITEMS-TO","PDF-BINARY"];
+          reload();
+        }
         if(tableName=="PROJECTS"){
           formInputs=["PROJECT_NAME","COMPANY_ID","ACCOUNT_NUMBER","DISCLAIMER"];
+          reload();
+        }
+        if(tableName=="USERS"){
+          formInputs=["USERNAME","PASSWORD","ADDRESS_ID"];
           reload();
         }
       }
