@@ -28,7 +28,7 @@ echo '<br>';
 if($tablename=="INVOICES"){
 
   $invoice_reference  = $_POST["REFERENCE"];
-  $invoice_project_id = $_POST["USERNAME"];
+  $invoice_project_id = $_POST["PROJECT_ID"];
   $invoice_payee_id   = $_POST["PAYEE_ID"];
   $invoice_company_id = $_POST["COMPANY_ID"];
   $invoice_items_from = $_POST["ITEMS_FROM"];
