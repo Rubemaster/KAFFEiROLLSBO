@@ -20,10 +20,11 @@ if ($conn->connect_error) {
       echo "REFERENCE: " . $row["REFERENCE"]. "<br>";
     }
   }
-  header("Location: ./../records/search/");
+  
   session_start();
   session_register('RESULTS');
   $_SESSION['RESULTS']=$results;
+  header("Location: ./../records/search/");
   $conn->close();
   
 }
