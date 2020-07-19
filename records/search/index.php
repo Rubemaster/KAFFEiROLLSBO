@@ -1,3 +1,11 @@
+<?php
+  session_start();
+  if(isset($_SESSION["RESULTS"])){
+    $preresults="<div class=\"container\"><div class=\"row p-10 br-4\"><div class=\"col p-10 br-4\" style=\"background-color: #002B66\"><div class=\"row p-10 br-4\"><div class=\"col p-10 br-4\">"
+    $postresults="</div></div></div></div></div>"
+    echo $preresults+"<p style=\"color: white\">"$_SESSION["RESULTS"][0] . "</p>" . $postresults;
+  }
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -79,5 +87,15 @@
             </div>
         </div>
     </div>
+     <div class="container">
+        <div class="row p-10 br-4">
+            <div class="col p-10 br-4" style="background-color: #002B66">
+                <div class="row p-10 br-4">
+                    <div class="col p-10 br-4">
+                    </div>
+                </div>
+             </div>
+         </div>
+      </div>
   </body>
 </html>
