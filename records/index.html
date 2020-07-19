@@ -75,13 +75,13 @@
       for(let i=0;i<2;i++){
         inputs.push(document.createElement("input"));
         inputs[i].type="text";
-        inputs[i].name="nothing";
-        inputs[i].id="nothing";
+        inputs[i].name=formInputs[i];
+        inputs[i].id=formInputs[i];
         inputs[i].style="color: white";
         labels.push(document.createElement("label"));
         labels[i].for="nothing";
         labels[i].style="color: white";
-        labels[i].innerHTML="nothing";
+        labels[i].innerHTML=formInputs[i];
         tds.push(document.createElement("td"));
         tds[i].appendChild(labels[i]);
         tds[i].appendChild(inputs[i]);
