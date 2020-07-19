@@ -7,7 +7,7 @@ $search_term=$_POST["SEARCH_TERM"];
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-header("Location: https://rubenrick.online/records/search/");
+header("Location: ./../records/search/");
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }else{
