@@ -52,7 +52,9 @@
                                     <label for="fname" style="color: white">TABLE NAME:</label><br>
                                     <input type="text" id="fname" name="fname" style="color: white">
                                   </td>
-                                <tr>
+                                </tr>
+                                <tr id="TABLE_INPUT">
+                                </tr>
                               </table>
                             </form>
                             <p style="color: rgba(0, 0, 0, 0.0);">_</p>
@@ -63,5 +65,12 @@
             </div>
         </div>
     </div>
-    </body>
+    <script>
+      let TABLE_INPUT = document.getElementById("TABLE_INPUT");
+      var INPUT = document.createElement("input");
+      INPUT.type = "text";
+      INPUT.name = "member" + i;
+      TABLE_INPUT.appendChild(input);
+    </script>
+  </body>
 </html>
