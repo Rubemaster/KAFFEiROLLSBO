@@ -55,8 +55,6 @@
                                 </tr>
                                 <tr>
                                   <td id="TABLE_INPUT">
-                                    <label for="fname" style="color: white">PASSWORD:</label><br>
-                                    <input type="text" id="fname" name="fname" style="color: white">
                                   </td>
                                 </tr>
                               </table>
@@ -71,10 +69,15 @@
     </div>
     <script>
       let table = document.getElementById("TABLE_INPUT");
-      var input = document.createElement("input");
+      let input = document.createElement("input");
+      let label = document.createElement("label");
       input.type = "text";
       input.name = "input1";
+      input.id = "input1";
       input.style="color: white";
+      label.for = "input1";
+      label.style="color: white";
+      label.innerHTML="infromation"
       TABLE_INPUT.appendChild(input);
     </script>
   </body>
