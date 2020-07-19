@@ -70,7 +70,6 @@
       let tableName="";
       let formInputs=[];
       let reload=function(){
-        table.innerHTML="";
         let tds=[];
         let inputs=[];
         let labels=[];
@@ -94,12 +93,12 @@
       let checkForMatch=function(){
         tableName=document.getElementById("TABLE_NAME").value;
         if(tableName=="PROJECTS"){
-          let formInputs=["PROJECT_NAME","COMPANY_ID","ACCOUNT_NUMBER","DISCLAIMER"];
+          formInputs=["PROJECT_NAME","COMPANY_ID","ACCOUNT_NUMBER","DISCLAIMER"];
           reload();
         }
       }
       document.getElementById("TABLE_NAME").addEventListener("change", checkForMatch());
-      let formInputs=["PROJECT_NAME","COMPANY_ID","ACCOUNT_NUMBER","DISCLAIMER"];
+      formInputs=["PROJECT_NAME","COMPANY_ID","ACCOUNT_NUMBER","DISCLAIMER"];
       reload();
     </script>
   </body>
