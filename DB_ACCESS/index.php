@@ -3,7 +3,7 @@ $servername = $_POST["SERVERNAME"];
 $username = $_POST["USERNAME"];
 $password = $_POST["PASSWORD"];
 $dbname = $_POST["DBNAME"];
-$tablename = $_POST["TABLEBNAME"];
+$tablename = $_POST["TABLENAME"];
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
