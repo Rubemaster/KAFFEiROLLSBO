@@ -14,11 +14,17 @@ if ($conn->connect_error) {
   echo "Connection Seuccessful";
   $sql = "SELECT REFERENCE, PROJECT_ID, PAYEE_ID, COMPANY_ID, ITEMS_FROM, ITEMS_TO FROM INVOICES WHERE ID='$search_term'";
   $result = $conn->query($sql);
+  $results =[];
   if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
+      array_push($results,$row["REFERENCE"]);
       echo "REFERENCE: " . $row["REFERENCE"]. "<br>";
     }
   }
+  session_start();
+  session_register('RESULTS');
+  $_SESSION['RESULTS']=$results;
   $conn->close();
+  header('Location: ./../records/search');
 }
 ?>
