@@ -60,11 +60,9 @@
                                   </td>
                                 </tr>
                                 
-                                <tr>
-                                  <td>
-                                    <label for="fname" style="color: white">SERVER NAME:</label>
-                                    <input type="text" id="fname" name="fname" style="color: white">
-                                  </td>
+                                <tr id="first">
+                                </tr>
+                                <tr id="second">
                                 </tr>
                               </table>
                             </form>
@@ -77,16 +75,14 @@
         </div>
     </div>
     <script>
-      let table = document.getElementById("TABLE_INPUT");
+      let first = document.getElementById("first");
+      let second = document.getElementById("second");
       let tableName="";
       let formInputs=[];
       let reload=function(){
-        let matches = document.getElementsByClassName('dynamic');
-        while(matches[0]) {
-          matches[0].parentNode.removeChild(matches[0]);
-        }
-        let tr=document.createElement("tr");
-        tr.className="dynamic";
+        
+        first.innerHTML="";
+        second.innerHTML="";
         let tds=[];
         let inputs=[];
         let labels=[];
@@ -109,9 +105,12 @@
           tds.push(document.createElement("td"));
           tds[i].appendChild(labels[i]);
           tds[i].appendChild(inputs[i]);
-          tr.appendChild(tds[i]);
+          if(i<4){
+            first.appendChild(tds[i]);
+          }else{
+            second.appendChild(tds[i]);
+          }
         }
-        table.appendChild(tr);
       }
       
       let checkForMatch=function(){
