@@ -4,14 +4,15 @@ $username = $_POST["USERNAME"];
 $password = $_POST["PASSWORD"];
 $dbname = $_POST["DBNAME"];
 $tablename = $_POST["TABLENAME"];
+echo 'Server Name: ';
 echo $servername;
-echo '<br>';
+echo '<br>User Name: ';
 echo $username;
-echo '<br>';
+echo '<br>Password: ';
 echo $password;
-echo '<br>';
+echo '<br>Data Base Name: ';
 echo $dbname;
-echo '<br>';
+echo '<br>Tabel Name: ';
 echo $tablename;
 echo '<br>';
 
@@ -23,13 +24,28 @@ if ($conn->connect_error) {
   echo "Connection Seuccessful";
 }
 if($tablename=="INVOICES"){
-  $invoice_reference  = $_POST["INVOICE_REFERENCE"];
-  $invoice_project_id = $_POST["INVOICE_PROJECT_ID"];
-  $invoice_payee_id   = $_POST["INVOICE_PAYEE_ID"];
-  $invoice_company_id = $_POST["INVOICE_COMPANY_ID"];
-  $invoice_items_from = $_POST["INVOICE_ITEMS_FROM"];
-  $invoice_items_to   = $_POST["INVOICE_ITEMS_TO"];
-  $invoice_binary     = $_POST["INVOICE_BINARY"];
+
+  $invoice_reference  = $_POST["REFERENCE"];
+  $invoice_project_id = $_POST["PROJECT_ID"];
+  $invoice_payee_id   = $_POST["PAYEE_ID"];
+  $invoice_company_id = $_POST["COMPANY_ID"];
+  $invoice_items_from = $_POST["ITEMS_FROM"];
+  $invoice_items_to   = $_POST["ITEMS_TO"];
+  $invoice_binary     = $_POST["BINARY"];
+  echo '<br>Target Table: INVOICES';
+  echo '<br>Reference number: ';
+  echo $invoice_reference;
+  echo '<br>Project ID: ';
+  echo $invoice_project_id;
+  echo '<br>Payee ID: ';
+  echo $invoice_payee_id;
+  echo '<br>Company ID: ';
+  echo $invoice_company_id;
+  echo '<br>Including items from: ';
+  echo $invoice_items_from;
+  echo " to ";
+  echo $invoice_items_to;
+  
 }
 
 // Create connection
