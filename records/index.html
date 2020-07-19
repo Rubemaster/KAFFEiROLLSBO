@@ -97,7 +97,8 @@
           reload();
         }
       }
-      document.getElementById("TABLE_NAME").addEventListener("change", checkForMatch());
+      document.getElementById("TABLE_NAME").addEventListener("change", (event) => {checkForMatch();});
+      
     </script>
   </body>
 </html>
