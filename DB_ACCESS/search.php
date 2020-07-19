@@ -7,7 +7,6 @@ $search_term=$_POST["SEARCH_TERM"];
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-header("Location: ./../records/search/");
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }else{
@@ -21,6 +20,7 @@ if ($conn->connect_error) {
       echo "REFERENCE: " . $row["REFERENCE"]. "<br>";
     }
   }
+  header("Location: ./../records/search/");
   session_start();
   session_register('RESULTS');
   $_SESSION['RESULTS']=$results;
