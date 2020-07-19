@@ -31,7 +31,7 @@ if($tablename=="INVOICES"){
   $invoice_project_id = $_POST["PROJECT_ID"];
   $invoice_payee_id   = $_POST["PAYEE_ID"];
   $invoice_company_id = $_POST["COMPANY_ID"];
-  $invoice_items_from = $_POST["REFERENCE"];
+  $invoice_items_from = $_POST["ITEMS_FROM"];
   $invoice_items_to   = $_POST["ITEMS_TO"];
   $invoice_binary     = $_POST["BINARY"];
   echo '<br>Reference number: ';
