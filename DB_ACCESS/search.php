@@ -4,6 +4,7 @@ if(!isset($_SESSION["SERVERNAME"])){$_SESSION["SERVERNAME"] = $_POST["SERVERNAME
 if(!isset($_SESSION["USERNAME"])){$_SESSION["USERNAME"] = $_POST["USERNAME"];}
 if(!isset($_SESSION["PASSWORD"])){$_SESSION["PASSWORD"] = $_POST["PASSWORD"];}
 if(!isset($_SESSION["DBNAME"])){$_SESSION["DBNAME"] = $_POST["DBNAME"];}
+if(!isset($_SESSION["RESULT"])){$_SESSION['RESULT']=0;}
 
 $servername = $_SESSION["SERVERNAME"];
 $username = $_SESSION["USERNAME"];
