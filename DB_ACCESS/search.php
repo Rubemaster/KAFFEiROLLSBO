@@ -30,7 +30,7 @@ if ($conn->connect_error) {
   echo "<i>Result:</i><br>";
   while($row = $_SESSION["RESULT"]->fetch_assoc()) {echo "REFERENCE: " . $row["REFERENCE"]."<br>";}
   
-  //header("Location: ./../records/search/");
+  header("Location: ./../records/search/");
   $conn->close();
   
 }
