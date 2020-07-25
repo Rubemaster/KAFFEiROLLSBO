@@ -12,7 +12,14 @@
           $search_term=$_POST["SEARCH_TERM"];
           $sql = "SELECT REFERENCE, PROJECT_ID, PAYEE_ID, COMPANY_ID, ITEMS_FROM, ITEMS_TO FROM INVOICES WHERE ID='$search_term'";
           $result = $conn->query($sql);
+          $current=0;
           echo '<input type="hidden" name="RESULT_COUNT" value="'.$result->num_rows.'">';
+          if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+              $current=$current+1;
+              echo '<input type="hidden" name="RESULT_VALUE_'.strval($current).'" value="'.$row["REFERENCE"].'">';
+            }
+          }
         }
       
         $conn->close();
