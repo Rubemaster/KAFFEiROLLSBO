@@ -85,14 +85,16 @@
         $preresults="<div class=\"container\"><div class=\"row p-10 br-4\"><div class=\"col p-10 br-4\" style=\"background-color: #002B66\"><div class=\"row p-10 br-4\"><div class=\"col p-10 br-4\">";
         $postresults="</div></div></div></div></div>";
         echo $preresults;
-        echo "<p style=\"color: white\"><b><i>RESULT COUNT:</b></i>"."</p>";
         if(isset($_SESSION["RESULTS"])){
           $result=$_SESSION["RESULT"];
+          echo "<p style=\"color: white\"><b><i>RESULT COUNT:</b>".$result->num_rows."</i></p>";
           if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
               echo "<p style=\"color: white\">"."REFERENCE: " . $row["REFERENCE"]."</p>";
             }
           }
+        }else{
+          echo "<p style=\"color: white\"><b><i>RESULT COUNT:</b> UNSET I.E. ZERO</i></p>";
         }
         echo $postresults;
       ?>
