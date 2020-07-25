@@ -85,7 +85,7 @@
         $preresults="<div class=\"container\"><div class=\"row p-10 br-4\"><div class=\"col p-10 br-4\" style=\"background-color: #002B66\"><div class=\"row p-10 br-4\"><div class=\"col p-10 br-4\">";
         $postresults="</div></div></div></div></div>";
         echo $preresults;
-        if(isset($_SESSION["RESULTS"])){
+        if(isset($_SESSION["RESULT"])){
           $result=$_SESSION["RESULT"];
           echo "<p style=\"color: white\"><b><i>RESULT COUNT:</b>".$result->num_rows."</i></p>";
           if ($result->num_rows > 0) {
