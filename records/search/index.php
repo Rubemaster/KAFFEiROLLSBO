@@ -85,8 +85,8 @@
         $preresults="<div class=\"container\"><div class=\"row p-10 br-4\"><div class=\"col p-10 br-4\" style=\"background-color: #002B66\"><div class=\"row p-10 br-4\"><div class=\"col p-10 br-4\">";
         $postresults="</div></div></div></div></div>";
         echo $preresults;
-        if(isset($_get["RESULT"])){
-          $result=$_get["RESULT"];
+        if(isset($_GET["RESULT"])){
+          $result=$_GET["RESULT"];
           echo "<p style=\"color: white\"><b><i>RESULT COUNT:</b>".count($result)."</i></p>";
           if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
@@ -95,7 +95,7 @@
           }
         }else{
           echo "<p style=\"color: white\"><b><i>RESULT COUNT:</b> UNSET I.E. ZERO</i></p>";
-          echo "<p style=\"color: white\"><b><i>SERVER NAME:</b>".$_SESSION["SERVERNAME"]."</i></p>";
+          echo "<p style=\"color: white\"><b><i>RESULT:</b>".$_GET["RESULT"]."</i></p>";
           
         }
         echo $postresults;
