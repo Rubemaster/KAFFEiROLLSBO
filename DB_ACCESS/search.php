@@ -19,8 +19,10 @@
           }
           echo '<input type="hidden" name="RESULT" value="'.$rows.'">';
         }
+      
         $conn->close();
       ?>
+      <input type="hidden" name="RESULT" value="nothing much">
     </form>
     <script>
       document.getElementById("PUSH_RESULT_BACK").submit();
