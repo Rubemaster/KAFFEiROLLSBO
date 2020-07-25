@@ -12,7 +12,8 @@
           $search_term=$_POST["SEARCH_TERM"];
           $sql = "SELECT REFERENCE, PROJECT_ID, PAYEE_ID, COMPANY_ID, ITEMS_FROM, ITEMS_TO FROM INVOICES WHERE ID='$search_term'";
           $result = $conn->query($sql);
-          echo "<p>Hidden form is here -></p><input type=\"hidden\" name=\"RESULT\" value='$result'><p><-</p>";
+          echo "<p>Hidden form is here -></p>";
+          echo "<input type=\"hidden\" name=\"RESULT\" value='$result'><p><-</p>";
         }
         $conn->close();
       ?>
