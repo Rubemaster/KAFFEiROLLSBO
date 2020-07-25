@@ -28,7 +28,7 @@ if ($conn->connect_error) {
   echo "<i>Database:</i> ".$_SESSION["DBNAME"]."<br>";
   echo "<b><i>Connection Seuccessful</i></b><br>";
   echo "<i>Result:</i> ";
-  echo mysqli_num_rows ( $result )."<br>";
+  echo $result."<br>";
   
   
   
