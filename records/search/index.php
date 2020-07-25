@@ -95,7 +95,7 @@
           }
         }else{
           echo "<p style=\"color: white\"><b><i>RESULT COUNT:</b> UNSET I.E. ZERO</i></p>";
-          echo "<p style=\"color: white\"><b><i>RESULT:</b>".$_GET["RESULT"]."</i></p>";
+          echo "<p style=\"color: white\"><b><i>RESULT:</b>".$_POST["RESULT_COUNT"]."</i></p>";
           
         }
         echo $postresults;
