@@ -17,6 +17,7 @@
           if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
               $current=$current+1;
+              echo '<p> type="hidden" name="RESULT_VALUE_'.strval($current).'" value="'.$row["REFERENCE"].'"</p>';
               echo '<input type="hidden" name="RESULT_VALUE_'.strval($current).'" value="'.$row["REFERENCE"].'">';
             }
           }
@@ -26,7 +27,7 @@
       ?>
     </form>
     <script>
-      document.getElementById("PUSH_RESULT_BACK").submit();
+      //document.getElementById("PUSH_RESULT_BACK").submit();
     </script>
   </body>
 </html>
