@@ -27,7 +27,7 @@
       ?>
     </form>
     <script>
-      //document.getElementById("PUSH_RESULT_BACK").submit();
+      document.getElementById("PUSH_RESULT_BACK").submit();
     </script>
   </body>
 </html>
