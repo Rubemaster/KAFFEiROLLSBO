@@ -8,6 +8,7 @@
         if ($conn->connect_error) {
           die("Connection failed: " . $conn->connect_error);
         }else{
+          echo "Connection successful";
           $search_term=$_POST["SEARCH_TERM"];
           $sql = "SELECT REFERENCE, PROJECT_ID, PAYEE_ID, COMPANY_ID, ITEMS_FROM, ITEMS_TO FROM INVOICES WHERE ID='$search_term'";
           $result = $conn->query($sql);
