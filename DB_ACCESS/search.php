@@ -22,7 +22,7 @@ if ($conn->connect_error) {
   $result = $conn->query($sql);
   
   $_SESSION['RESULT']=$result;
-  header("Location: ./../records/search/");
+  //header("Location: ./../records/search/");
   $conn->close();
   
 }
