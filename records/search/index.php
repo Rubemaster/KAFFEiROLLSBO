@@ -81,11 +81,11 @@
         </div>
       </div>
       <?php
-        echo "<p style=\"color: white\">this works y'all</p>";
         session_start();
         $preresults="<div class=\"container\"><div class=\"row p-10 br-4\"><div class=\"col p-10 br-4\" style=\"background-color: #002B66\"><div class=\"row p-10 br-4\"><div class=\"col p-10 br-4\">";
         $postresults="</div></div></div></div></div>";
         echo $preresults;
+        echo "<p style=\"color: white\">this works y'all</p>";
         if(isset($_SESSION["RESULTS"])){
           echo $preresults;
           $result=$_SESSION["RESULT"];
