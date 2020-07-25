@@ -85,9 +85,9 @@
         $preresults="<div class=\"container\"><div class=\"row p-10 br-4\"><div class=\"col p-10 br-4\" style=\"background-color: #002B66\"><div class=\"row p-10 br-4\"><div class=\"col p-10 br-4\">";
         $postresults="</div></div></div></div></div>";
         echo $preresults;
-        if(isset($_POST["RESULT"])){
-          $result=$_POST["RESULT"];
-          echo "<p style=\"color: white\"><b><i>RESULT COUNT:</b>".$result->num_rows."</i></p>";
+        if(isset($_get["RESULT"])){
+          $result=$_get["RESULT"];
+          echo "<p style=\"color: white\"><b><i>RESULT COUNT:</b>".count($result)."</i></p>";
           if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
               echo "<p style=\"color: white\">"."REFERENCE: " . $row["REFERENCE"]."</p>";
