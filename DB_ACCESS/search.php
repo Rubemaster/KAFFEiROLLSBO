@@ -32,6 +32,6 @@ if ($conn->connect_error) {
   
   header("Location: ./../records/search/");
   $conn->close();
-  
+  exit();
 }
 ?>
