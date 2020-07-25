@@ -11,7 +11,7 @@
           echo "Connection successful";
           $search_term=$_POST["SEARCH_TERM"];
           $search_by=$_POST["SEARCH_BY"];
-          $tablename=$_POST["TABLE_NAME"];
+          $tablename=$_POST["TABLENAME"];
           $sql = "SELECT REFERENCE, PROJECT_ID, PAYEE_ID, COMPANY_ID, ITEMS_FROM, ITEMS_TO FROM '$tablename' WHERE '$search_by'='$search_term'";
           $result = $conn->query($sql);
           $current=0;
