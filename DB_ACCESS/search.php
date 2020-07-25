@@ -20,7 +20,7 @@ if ($conn->connect_error) {
   $sql = "SELECT REFERENCE, PROJECT_ID, PAYEE_ID, COMPANY_ID, ITEMS_FROM, ITEMS_TO FROM INVOICES WHERE ID='$search_term'";
   $result = $conn->query($sql);
   
-  $_SESSION['RESULT']=$result;
+  $_SESSION["RESULT"]=$result;
   
   echo "<i>Servername:</i> ".$_SESSION["SERVERNAME"]."<br>";
   echo "<i>Username:</i> ".$_SESSION["USERNAME"]."<br>";
@@ -28,7 +28,7 @@ if ($conn->connect_error) {
   echo "<i>Database:</i> ".$_SESSION["DBNAME"]."<br>";
   echo "<b><i>Connection Successful</i></b><br>";
   echo "<i>Result:</i><br>";
-  while($row = $result->fetch_assoc()) {echo "REFERENCE: " . $row["REFERENCE"]."<br>";}
+  while($row = $_SESSION["RESULT"]->fetch_assoc()) {echo "REFERENCE: " . $row["REFERENCE"]."<br>";}
   
   //header("Location: ./../records/search/");
   $conn->close();
