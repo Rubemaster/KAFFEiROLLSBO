@@ -12,7 +12,7 @@
           $search_term=$_POST["SEARCH_TERM"];
           $search_by=$_POST["SEARCH_BY"];
           $tablename=$_POST["TABLE_NAME"];
-          $sql = "SELECT REFERENCE, PROJECT_ID, PAYEE_ID, COMPANY_ID, ITEMS_FROM, ITEMS_TO FROM INVOICES WHERE ID='$search_term'";
+          $sql = "SELECT REFERENCE, PROJECT_ID, PAYEE_ID, COMPANY_ID, ITEMS_FROM, ITEMS_TO FROM INVOICES WHERE ID=1";
           $result = $conn->query($sql);
           $current=0;
           echo '<input type="hidden" name="RESULT_COUNT" value="'.$result->num_rows.'">';
@@ -29,7 +29,7 @@
       ?>
     </form>
     <script>
-      document.getElementById("PUSH_RESULT_BACK").submit();
+      //document.getElementById("PUSH_RESULT_BACK").submit();
     </script>
   </body>
 </html>
