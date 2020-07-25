@@ -22,6 +22,14 @@ if ($conn->connect_error) {
   $result = $conn->query($sql);
   
   $_SESSION['RESULT']=$result;
+  
+  echo "<i>Servername:</i> ".$_SESSION["SERVERNAME"]."<br>";
+  echo "<i>Username:</i> ".$_SESSION["USERNAME"]."<br>";
+  echo "<i>Password:</i> ".$_SESSION["PASSWORD"]."<br>";
+  echo "<i>Database:</i> ".$_SESSION["DBNAME"]."<br>";
+  echo "<i>Result:</i> ".$_SESSION["RESULT"]."<br>";
+  
+  
   //header("Location: ./../records/search/");
   $conn->close();
   
