@@ -17,7 +17,7 @@
           {
               $rows[] = $row;
           }
-          echo '<input type="hidden" name="RESULT" value='.$rows.'>";
+          echo '<input type="hidden" name="RESULT" value="'.$rows.'">';
         }
         $conn->close();
       ?>
