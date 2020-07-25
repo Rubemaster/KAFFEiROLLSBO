@@ -28,7 +28,8 @@ if ($conn->connect_error) {
   echo "<i>Database:</i> ".$_SESSION["DBNAME"]."<br>";
   echo "<b><i>Connection Seuccessful</i></b><br>";
   echo "<i>Result:</i> ";
-  echo $_SESSION["RESULT"]."<br>";
+  echo mysqli_num_rows ( $result )."<br>";
+  
   
   
   //header("Location: ./../records/search/");
