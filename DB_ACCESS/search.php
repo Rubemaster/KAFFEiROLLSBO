@@ -26,7 +26,7 @@ if ($conn->connect_error) {
   echo "<i>Username:</i> ".$_SESSION["USERNAME"]."<br>";
   echo "<i>Password:</i> ".$_SESSION["PASSWORD"]."<br>";
   echo "<i>Database:</i> ".$_SESSION["DBNAME"]."<br>";
-  echo "<b><i>Connection Seuccessful</i></b><br>";
+  echo "<b><i>Connection Successful</i></b><br>";
   echo "<i>Result:</i><br>";
   while($row = $result->fetch_assoc()) {echo "REFERENCE: " . $row["REFERENCE"]."<br>";}
   
