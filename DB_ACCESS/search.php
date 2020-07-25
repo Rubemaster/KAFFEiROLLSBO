@@ -27,10 +27,8 @@ if ($conn->connect_error) {
   echo "<i>Password:</i> ".$_SESSION["PASSWORD"]."<br>";
   echo "<i>Database:</i> ".$_SESSION["DBNAME"]."<br>";
   echo "<b><i>Connection Seuccessful</i></b><br>";
-  echo "<i>Result:</i> ";
-  echo $result[0]."<br>";
-  
-  
+  echo "<i>Result:</i><br>";
+  while($row = $result->fetch_assoc()) {echo "REFERENCE: " . $row["REFERENCE"]."<br>";}
   
   //header("Location: ./../records/search/");
   $conn->close();
