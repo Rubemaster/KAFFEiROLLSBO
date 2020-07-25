@@ -17,7 +17,6 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }else{
-  echo "Connection Seuccessful";
   $sql = "SELECT REFERENCE, PROJECT_ID, PAYEE_ID, COMPANY_ID, ITEMS_FROM, ITEMS_TO FROM INVOICES WHERE ID='$search_term'";
   $result = $conn->query($sql);
   
@@ -27,7 +26,9 @@ if ($conn->connect_error) {
   echo "<i>Username:</i> ".$_SESSION["USERNAME"]."<br>";
   echo "<i>Password:</i> ".$_SESSION["PASSWORD"]."<br>";
   echo "<i>Database:</i> ".$_SESSION["DBNAME"]."<br>";
-  echo "<i>Result:</i> ".$_SESSION["RESULT"]."<br>";
+  echo "<b><i>Connection Seuccessful</i><b/><br>";
+  echo "<i>Result:</i> ";
+  echo $_SESSION["RESULT"]."<br>";
   
   
   //header("Location: ./../records/search/");
