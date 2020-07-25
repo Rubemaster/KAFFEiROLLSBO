@@ -1,3 +1,4 @@
+<p>Thinking</p>
 <form id="PUSH_RESULT_BACK" action="Page_C.php" method="post">
 <?php
   $conn = new mysqli($_POST["SERVERNAME"], $_POST["USERNAME"], $_POST["PASSWORD"], $_POST["DBNAME"]);
