@@ -95,6 +95,8 @@
           }
         }else{
           echo "<p style=\"color: white\"><b><i>RESULT COUNT:</b> UNSET I.E. ZERO</i></p>";
+          echo "<p style=\"color: white\"><b><i>SERVER NAME:</b>".$_SESSION["SERVERNAME"]."</i></p>";
+          
         }
         echo $postresults;
       ?>
