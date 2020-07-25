@@ -10,14 +10,14 @@ $servername = $_SESSION["SERVERNAME"];
 $username = $_SESSION["USERNAME"];
 $password = $_SESSION["PASSWORD"];
 $dbname = $_SESSION["DBNAME"];
-$search_term=$_POST["SEARCH_TERM"];
+$search_term=$_GET["SEARCH_TERM"];
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }else{
-  $sql = "SELECT REFERENCE, PROJECT_ID, PAYEE_ID, COMPANY_ID, ITEMS_FROM, ITEMS_TO FROM INVOICES WHERE ID=1";
+  $sql = "SELECT REFERENCE, PROJECT_ID, PAYEE_ID, COMPANY_ID, ITEMS_FROM, ITEMS_TO FROM INVOICES WHERE ID='$search_term'";
   $result = $conn->query($sql);
   
   $_SESSION['RESULT']=$result;
