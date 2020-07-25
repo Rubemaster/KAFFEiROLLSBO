@@ -66,6 +66,19 @@
                                     <label for="in5" style="color: white">SEARCH TERM:</label>
                                     <input type="text" id="in5" name="SEARCH_TERM" style="color: white">
                                   </td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td>
+                                    <label for="SEARCH_BY" style="color: white">SEARCH BY:</label>
+                                    <select id="SEARCH_BY" name="SEARCH_BY" style="color: white">
+                                      <option value="ID">ID</option>
+                                      <option value="USERNAME">USERNAME</option>
+                                      <option value="REFERENCE">REFERENCE</option>
+                                      <option value="PROJECT">PROJECT</option>
+                                      <option value="COMPANY">COMPANY</option>
+                                    </select>
+                                  </td>
                                 </tr>
                                 <tr>
                                   <td>
