@@ -98,8 +98,8 @@
           echo "<p style=\"color: white\"><b><i>RESULT:</b>".$_POST["RESULT_COUNT"]."</i></p>";
           $count=$_POST["RESULT_COUNT"];
           for($i=0;$i<$count;$i++){
-            $post_query="RESULT_VALUE_"+strval($i+1);
-            echo "<p style=\"color: white\"><b><i>RESULT:</b>".$post_query."</i></p>";
+            $post_query="RESULT_VALUE_".strval($i+1);
+            echo "<p style=\"color: white\"><b><i>VALUE:</b>".$post_query."</i></p>";
           }
         }
         echo $postresults;
