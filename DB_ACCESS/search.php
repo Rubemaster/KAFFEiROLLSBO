@@ -10,7 +10,7 @@ $servername = $_SESSION["SERVERNAME"];
 $username = $_SESSION["USERNAME"];
 $password = $_SESSION["PASSWORD"];
 $dbname = $_SESSION["DBNAME"];
-$search_term=$_GET["SEARCH_TERM"];
+$search_term=$_POST["SEARCH_TERM"];
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -30,7 +30,7 @@ if ($conn->connect_error) {
   echo "<i>Result:</i><br>";
   while($row = $result->fetch_assoc()) {echo "REFERENCE: " . $row["REFERENCE"]."<br>";}
   
-  //header("Location: ./../records/search/");
+  header("Location: ./../records/search/");
   $conn->close();
   
 }
