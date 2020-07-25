@@ -12,7 +12,12 @@
           $search_term=$_POST["SEARCH_TERM"];
           $sql = "SELECT REFERENCE, PROJECT_ID, PAYEE_ID, COMPANY_ID, ITEMS_FROM, ITEMS_TO FROM INVOICES WHERE ID='$search_term'";
           $result = $conn->query($sql);
-          echo '<input type="hidden" name="RESULT" value='.$result.'>";
+          $rows = [];
+          while($row = mysqli_fetch_array($result))
+          {
+              $rows[] = $row;
+          }
+          echo '<input type="hidden" name="RESULT" value='.$rows.'>";
         }
         $conn->close();
       ?>
