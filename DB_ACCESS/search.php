@@ -2,7 +2,7 @@
 <html>
   <body>
     <p>Thinking</p>
-    <form id="PUSH_RESULT_BACK" action="./../records/search" method="post">
+    <form id="PUSH_RESULT_BACK" action="./../records/search/index.php" method="post">
       <?php
         $conn = new mysqli($_POST["SERVERNAME"], $_POST["USERNAME"], $_POST["PASSWORD"], $_POST["DBNAME"]);
         if ($conn->connect_error) {
